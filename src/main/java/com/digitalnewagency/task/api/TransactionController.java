@@ -22,7 +22,7 @@ public class TransactionController {
     @ResponseStatus(NO_CONTENT)
     @PostMapping
     void saveTransactionLog(@RequestBody TransactionDto transactionDto) {
-        transactionService.addCase(transactionDto);
+        transactionService.addTransaction(transactionDto);
     }
 
 }
