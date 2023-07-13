@@ -14,10 +14,11 @@ public class TransactionService {
         this.transactionRepository = transactionRepository;
     }
 
-    public void addCase(TransactionDto caseDto) {
+    public void addTransaction(TransactionDto transactionDto) {
         Transaction transaction = new Transaction();
-        transaction.setUserId(caseDto.getUserId());
+        transaction.setUserId(transactionDto.getUserId());
         transactionRepository.save(transaction);
     }
+
 
 }
