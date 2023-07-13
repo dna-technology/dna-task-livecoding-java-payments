@@ -26,13 +26,13 @@ class TransactionControllerTest {
 	int port;
 
 	@Autowired
-	private TransactionRepository caseRepository;
+	private TransactionRepository transactionRepository;
 
 	@Test
 	void shouldSaveTransaction() throws URISyntaxException, IOException, InterruptedException {
 		// given
 		// when
-		String casePayload = """
+		String transactionPayload = """
 			{
 				"userId": "0720f0d6-0e82-4be5-98f0-72c2c9f229a6"
 			}
@@ -42,12 +42,12 @@ class TransactionControllerTest {
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(uri)
 				.headers(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-				.POST(HttpRequest.BodyPublishers.ofString(casePayload))
+				.POST(HttpRequest.BodyPublishers.ofString(transactionPayload))
 				.build();
 		HttpClient.newBuilder().build().send(request, HttpResponse.BodyHandlers.ofString());
 
 		// then
-		List<Transaction> transactions = caseRepository.findAll();
+		List<Transaction> transactions = transactionRepository.findAll();
 		assertThat(transactions).hasSize(1);
 	}
 
