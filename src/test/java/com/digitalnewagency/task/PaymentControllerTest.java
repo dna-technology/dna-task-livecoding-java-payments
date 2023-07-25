@@ -60,7 +60,7 @@ class PaymentControllerTest {
 
 
     @Test
-    void shouldSaveTransaction() throws URISyntaxException, IOException, InterruptedException, JSONException {
+    void shouldSaveUser() throws URISyntaxException, IOException, InterruptedException, JSONException {
         // given
         String userId = thereIsAUser();
         String merchantId = thereIsAMerchant();
