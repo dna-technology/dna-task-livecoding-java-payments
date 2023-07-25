@@ -40,7 +40,7 @@ class UserControllerTest {
     private final BasicJsonTester jsonTester = new BasicJsonTester(getClass());
 
     @Test
-    void shouldSaveTransaction() throws URISyntaxException, IOException, InterruptedException, JSONException {
+    void shouldSaveUser() throws URISyntaxException, IOException, InterruptedException, JSONException {
         URI uri = URI.create("http://localhost:%d/users".formatted(port));
 
         // given
