@@ -3,9 +3,10 @@
 2. run tests by using mvn wrapper to check if everything works fine.
 
 ## Scenario
-Let's imagine you are working on API for backoffice of online payment system. System has transactions log. 
-It means that information about transactions are stored in database. Data can be used for reporting.
-
+Let's imagine you are working on API for backend of online payment system. 
+In this system the user can make a payment to a specific merchant
+System has payment log. It means that information about payments are stored in database. 
+Data can be used for reporting.
 
 ## Task
-Add new endpoint which give total income for transactions for selected time period
+Add new endpoint which give total income for payments for selected time period for given merchant.
