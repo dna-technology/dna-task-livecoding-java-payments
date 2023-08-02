@@ -17,4 +17,4 @@ Currently implemented:
 ## Task 1:
 Please make a code review of the currently implemented solution.
 ## Task 2:
-Add new endpoint which give total income for payments for selected time period for given merchant. (edited) 
+Add new endpoint which give total income for payments for selected time period for given merchant.
